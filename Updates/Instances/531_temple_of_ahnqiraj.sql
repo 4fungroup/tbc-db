@@ -868,6 +868,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (15589, 0, 0, 1, 16, 0, 0, NULL), -- Eye of C'Thun
 (15727, 0, 0, 1, 16, 0, 0, NULL), -- C'Thun
 (15896, 0, 0, 1, 16, 0, 0, NULL), -- C'Thun Portal
+(15933, 0, 0, 1, 16, 0, 0, '25786'), -- Poison Cloud
 (15957, 0, 0, 1, 16, 0, 0, NULL), -- Ouro Spawner
 (15963, 0, 0, 1, 16, 0, 0, '18430'), -- The Master's Eye
 (15984, 0, 0, 1, 16, 0, 0, NULL); -- Sartura's Royal Guard
@@ -1543,7 +1544,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 -- ===========
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
-(@OGUID+1, 180634, 531, -8929.61, 1344.38, -104.211, 3.84846, 0, 0, -0.938191, 0.346119, 7200, 7200, 100, 0), -- Door
+(@OGUID+1, 180634, 531, -8929.61, 1344.38, -104.211, 3.84846, 0, 0, -0.938191, 0.346119, 7200, 7200, 100, 1), -- Door
 (@OGUID+2, 180635, 531, -9016.36, 1330.68, -104.211, 2.80125, 0, 0, 0.985556, 0.169352, 7200, 7200, 100, 1), -- Door
 (@OGUID+3, 180636, 531, -8429.59, 2048.81, 153.309, 3.51685, 0, 0, -0.982449, 0.186529, 7200, 7200, 100, 1), -- Door
 (@OGUID+4, 180690, 531, -8561.12, 1989.54, -3.09152, 4.18879, 0, 0, -0.866025, 0.500001, 7200, 7200, 100, 1), -- Large Scarab Coffer

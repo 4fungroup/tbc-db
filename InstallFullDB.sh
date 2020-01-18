@@ -7,8 +7,8 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE="TBCDB_1.7.0_ANewHope.sql"
-DB_TITLE="v1.7 'A New Hope'"
+FULLDB_FILE="TBCDB_1.8.0_VengeanceStrikesBack.sql"
+DB_TITLE="v1.8 'Vengeance Strikes Back'"
 NEXT_MILESTONES="0.12.4 0.13"
 
 #internal use
@@ -316,6 +316,18 @@ then
     exit 1
   fi
   echo "  ScriptDev2 successfully applied"
+  echo
+  echo
+
+  # Apply spell.sql
+  echo "> Trying to apply $CORE_PATH/sql/scriptdev2/spell.sql ..."
+  $MYSQL_COMMAND < $CORE_PATH/sql/scriptdev2/spell.sql
+  if [[ $? != 0 ]]
+  then
+    echo "ERROR: cannot apply $CORE_PATH/sql/scriptdev2/spell.sql"
+    exit 1
+  fi
+  echo "  Spell scripts successfully applied"
   echo
   echo
 fi
